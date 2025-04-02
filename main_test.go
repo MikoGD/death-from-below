@@ -31,18 +31,17 @@ func TestMain(m *testing.M) {
 }
 
 type TestFunctionErr struct {
-	Name       string
-	Parameters []string
-  ExpectedError error
+	Name          string
+	Parameters    []string
+	ExpectedError error
 }
-
 
 func TestInvalidArgsLength(t *testing.T) {
 	// Not including the first arg passed in by default when calling
 	tests := []TestFunctionErr{
 		{"No args", []string{"Main"}, InvalidArgsError{}},
 		{"One arg", []string{"Main", "src", "pattern"}, InvalidArgsError{}},
-		{"Two arg", []string{"Main", "src", "pattern", "from",}, InvalidArgsError{}},
+		{"Two arg", []string{"Main", "src", "pattern", "from"}, InvalidArgsError{}},
 	}
 
 	for _, test := range tests {
@@ -60,8 +59,8 @@ func TestInvalidArgsLength(t *testing.T) {
 func TestInvalidArg(t *testing.T) {
 	// Not including the first arg passed in by default when calling
 	tests := []TestFunctionErr{
-    {"Empty source arg", []string{"Main", "", "pattern", "from", "to"}, InvalidSourceArg{}},
-    {"Empty glob pattern arg", []string{"Main", "src", "", "from", "to"}, InvalidGlobArg{}},
+		{"Empty source arg", []string{"Main", "", "pattern", "from", "to"}, InvalidSourceArg{}},
+		{"Empty glob pattern arg", []string{"Main", "src", "", "from", "to"}, InvalidGlobArg{}},
 	}
 
 	for _, test := range tests {
