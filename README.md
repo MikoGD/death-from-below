@@ -27,5 +27,7 @@ Death from below will recursively look through all folders, there is not way to
 exclude folders.
 
 ## Note
+There are existing solutions but this was made for learning and personal purposes.
+
 I name projects that reference League of Legends. The name "Death From Below"
 comes from the champion Pyke's ultimate name.
