@@ -16,6 +16,12 @@ The tool takes four arguments:
   3. The line you want to replace
   4. The line you want to replace to
 
+**NOTE:** The glob pattern paramters must be in double quotes
+
+```sh
+death-from-below example-dir "*.txt" Hello Goodbye
+```
+
 ## Limitations
 Death from below will recursively look through all folders, there is not way to
 exclude folders.
