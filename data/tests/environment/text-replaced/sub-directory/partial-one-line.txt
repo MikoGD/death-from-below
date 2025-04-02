@@ -1,0 +1,1 @@
+One line to test replace, replace the following [replaced line] after replace text
